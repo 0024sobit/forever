@@ -116,7 +116,7 @@ export const products = [
         image: [p_img2_1,p_img2_2,p_img2_3,p_img2_4],
         category: "Men",
         subCategory: "Topwear",
-        sizes: ["M", "L", "XL"],
+        sizes: ["M", "L", "XL"], 
         date: 1716621345448,
         bestseller: true
     },
@@ -680,20 +680,20 @@ export const products = [
         image: [p_img49],
         category: "Kids",
         subCategory: "Bottomwear",
-        sizes: ["S", "M", "L", "XL"],
+        sizes: ["S", "M", "L", "XL"],     
         date: 1716665145448,
         bestseller: false
-    },
-    {
-        _id: "aaabx",
+    },   
+    {  
+        _id: "aaabx",  
         name: "Kid Tapered Slim Fit Trouser",
         description: "A lightweight, usually knitted, pullover shirt, close-fitting and with a round neckline and short sleeves, worn as an undershirt or outer garment.",
         price: 340,
-        image: [p_img50],
-        category: "Kids",
-        subCategory: "Bottomwear",
-        sizes: ["S", "M", "L", "XL"],
-        date: 1716666245448, bestseller: false
+        image: [p_img50],  
+        category: "Kids",    
+        subCategory: "Bottomwear",  
+        sizes: ["S", "M", "L", "XL"],     
+        date: 1716666245448, bestseller: false   
     },
     {
         _id: "aaaby",

@@ -7,32 +7,32 @@ export const ShopContext = createContext();
 
 const ShopContextProvider = (props) => {
     const currency = '₹';
-    const delivery_fee = 10;
-    const [search,setSearch] = useState(''); 
-    const [showSearch, setShowSearch] = useState(false)          
-    const [cartItems, setCartItems] = useState({}) 
-    const navigate = useNavigate();
-
-    const addToCart = async (itemId, size) => {       
-        if (!size) {   
-            toast.error('Please Select Size'); 
+    const delivery_fee = 10;    
+    const [search,setSearch] = useState('');   
+    const [showSearch, setShowSearch] = useState(false)               
+    const [cartItems, setCartItems] = useState({})  
+    const navigate = useNavigate();  
+  
+    const addToCart = async (itemId, size) => {  
+        if (!size) {      
+            toast.error('Please Select Size');    
             return;
         }  
          
         let cartData = structuredClone(cartItems);         
-        if (cartData[itemId]) {
-            if (cartData[itemId][size]) {        
+        if (cartData[itemId]) {   
+            if (cartData[itemId][size]) {         
                 cartData[itemId][size] += 1    
             }    
             else{
-                cartData[itemId][size] = 1; 
+                cartData[itemId][size] = 1;     
             }
         }
         else{
             cartData[itemId] ={};
             cartData[itemId][size] =1;
         }  
-        setCartItems(cartData);
+        setCartItems(cartData);  
         toast.success('Item added to Cart')
     }
     
@@ -44,7 +44,7 @@ const ShopContextProvider = (props) => {
                     if (cartItems[items][item]>0) {       
                         totalCount += cartItems[items][item]      
                     }
-                } catch (error) {
+                } catch (error) { 
                     
                 }
             }
@@ -52,7 +52,7 @@ const ShopContextProvider = (props) => {
         return totalCount
     }
 
-    const updateQuantity = async (itemId,size,quantity) => {
+    const updateQuantity = async (itemId,size,quantity) => { 
         let cartData = structuredClone(cartItems)
         cartData[itemId][size] = quantity
         setCartItems(cartData)
@@ -72,7 +72,7 @@ const ShopContextProvider = (props) => {
                 }
             }
         }
-        return totalAmount
+        return totalAmount  
     }
 
 
@@ -82,9 +82,9 @@ const ShopContextProvider = (props) => {
 
     return (
         <ShopContext.Provider value={value}>
-            {props.children}
-        </ShopContext.Provider>
-    )
+            {props.children} 
+        </ShopContext.Provider> 
+    ) 
 }
 
 export default ShopContextProvider;   

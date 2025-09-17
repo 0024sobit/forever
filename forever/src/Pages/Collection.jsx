@@ -12,18 +12,18 @@ const Collection = () => {
   const [subCategory, setSubCategory] = useState([]) 
   const [sortType, setSortType] = useState('relavent')
 
-  const toggleCategory = (e) => {
+  const toggleCategory = (e) => {  
     if(Category.includes(e.target.value)){      
-        setCategory(prev=> prev.filter(item => item !== e.target.value))  
+        setCategory(prev=> prev.filter(item => item !== e.target.value))   
     } else{ 
         setCategory(prev => [...prev, e.target.value])    
     }
   }
-  const toggleSubCategory = (e) => {   
+  const toggleSubCategory = (e) => {    
     if(subCategory.includes(e.target.value)){
       setSubCategory(prev => prev.filter(item => item !== e.target.value))    
     } else {
-      setSubCategory(prev => [...prev, e.target.value])
+      setSubCategory(prev => [...prev, e.target.value]) 
     }
   }
   const applyFilter = () => {
@@ -48,7 +48,7 @@ const Collection = () => {
         setFilterProducts(fpCopy.sort((a,b) => (a.price - b.price)));
         break;
 
-        case 'high-low':
+        case 'high-low':  
           setFilterProducts(fpCopy.sort((a,b) => (b.price - a.price))); 
           break;
 
@@ -75,7 +75,7 @@ const Collection = () => {
       <div className="min-w-60 ">
         <p
           onClick={() => setShowFilter(!showFilter)}
-          className="my-2 text-xl flex items-center cursor-pointer gap-2"
+          className="my-2 text-xl flex items-center cursor-pointer gap-2" 
         >
           FILTERS{" "}
           <img
@@ -86,12 +86,12 @@ const Collection = () => {
         </p> 
         {/* Category Filter */}
         <div
-          className={`border border-gray-300 pl-5 py-3 mt-6 ${
+          className={`border border-gray-300 pl-5 py-3 mt-6 ${     
             showFilter ? "" : "hidden"
           } sm:block`}
         >
-          <p className="mb-3 text-sm font-medium">CATEGORIES</p>
-          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">
+          <p className="mb-3 text-sm font-medium">CATEGORIES</p>   
+          <div className="flex flex-col gap-2 text-sm font-light text-gray-700">  
             <p className="flex gap-2">
               <input type="checkbox" className="w-3" value={"Men"}  onChange={toggleCategory}/>
               Men

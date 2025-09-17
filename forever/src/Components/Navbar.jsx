@@ -20,10 +20,10 @@ const Navbar = () => {
             <NavLink to='/collection' className='flex flex-col items-center gap-1'>     
                 <p >COLLECTION</p>
                 <hr  className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>  
-            </NavLink>
+            </NavLink>    
             <NavLink to='/about' className='flex flex-col items-center gap-1'>     
                 <p >ABOUT</p>
-                <hr  className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>
+                <hr  className='w-2/4 border-none h-[1.5px] bg-gray-700 hidden'/>   
             </NavLink>
             <NavLink to='/contact' className='flex flex-col items-center gap-1'>       
                 <p >CONTACT</p>
@@ -31,7 +31,7 @@ const Navbar = () => {
             </NavLink>
         </ul>
         <div className='flex items-center gap-6'>
-            <img onClick={() => setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />   
+            <img onClick={() => setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />     
             <div className='group relative'>
                 <Link to={'/login'}><img src={assets.profile_icon} className='w-5 cursor-pointer'  alt="" /></Link>
                 <div className='group-hover:block hidden absolute dropdown-menu right-0 pt-4'>    
